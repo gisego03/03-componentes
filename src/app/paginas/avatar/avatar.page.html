@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Avatar</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="/assets/images/original.jpg">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+<app-header
+  title="Avatar"  
+>
+  <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="/assets/images/original.jpg">
+      </ion-avatar>
+    </ion-buttons>
+</app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-chip *ngFor="let i of [1,1,1,1,1,1]">
+    <ion-avatar>
+      <img src="/assets/images/original.jpg" alt="">
+    </ion-avatar>
+    <ion-label>Stan Lee</ion-label>
+
+  </ion-chip>
+
+  <ion-list *ngFor="let i of [1,1,1,1,1,1,1]">
+    <ion-avatar slot="start">
+      <img src="/assets/images/original.jpg" />
+    </ion-avatar>
+  </ion-list>
+
+</ion-content>
