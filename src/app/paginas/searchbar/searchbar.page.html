@@ -1,0 +1,22 @@
+<app-header title="searchbar" [searchbarConfig]="searchbarConfig">
+  
+</app-header>
+
+<ion-content>
+  <!-- <ion-searchbar
+  *ngIf="searchbarConfig"
+  [placeholder]="searchbarConfig.placeholder|| ''"
+  (ionChange)="searchbarConfig.handler($event)"
+  animated
+></ion-searchbar> -->
+
+  <ion-list>
+    <ion-list-header>
+      <h1>Albumes</h1>
+    </ion-list-header>
+    <ion-item *ngFor="let album of albumes | filtro: searchText: 'title'; let i=index">
+      <ion-label>{{album.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

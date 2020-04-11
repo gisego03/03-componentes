@@ -1,0 +1,17 @@
+<app-header title="list reorder">
+</app-header>
+
+<ion-content> 
+  <ion-list >
+    <!-- (ionItemReorder)="reorder($event)"  -->
+    <ion-reorder-group #lista disabled="false">
+      <ion-item *ngFor="let item of personajes; let i=index">
+        <ion-label>{{i+1}}.-{{item}}</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+  <ion-button #button (click)="onClick()">
+    button
+  </ion-button>
+</ion-content>
