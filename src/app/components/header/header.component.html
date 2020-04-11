@@ -1,13 +1,22 @@
-<ion-header class="ion-no-border">
+<ion-header
+  class="ion-no-border"
+  translucent="translucent"
+>
   <ion-toolbar>
-
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
 
     <ion-title class="ion-text-capitalize">{{title}}</ion-title>
 
+    <!-- Contenido asignado por el padre -->
     <ng-content></ng-content>
-    
   </ion-toolbar>
+
+  <ion-searchbar
+    *ngIf="searchbarConfig"
+    [placeholder]="searchbarConfig.placeholder|| ''"
+    (ionChange)="searchbarConfig.handler($event)"
+    animated
+  ></ion-searchbar>
 </ion-header>
